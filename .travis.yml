@@ -1,0 +1,55 @@
+language: php
+
+source_key: "LLLLLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBbjNpY2ZXNXh6YnZsNWJOOWJjeEJmallwTUpsbzhCWmp5cXNaaUkwclYrM2VjZUthCnczSGs1MEZZeWl4YWZISFRqVXllMHRKWUhnRU5QNml1OGRqQ1hUdHFBV042anFlS05raHVwSmNpbmhEQkszaFUKREVyeWFBYk9yd1Q3eXNwdTJDRU9KL2FMZVdEc0M1WWhCU0pVdFVzMy9yclNQblZZNy94U282QVRTTElCN2Z0dQp4L3ZtOWNRMWxFbEtIS2tCQ1ZXSnNUT29WdUxyekQ5Z1V0SXRUKzF5WkJQQW5zaVR0ME1OcmFhNWRkWjIxY3BDCnE4aVBPc2NUU2J2T2NuNzFmbGNuZkJUTGw2YWhSc1J1Z3lRTGhnSWR6Y0FaUk54NVFsTUFJbzBkV1ZYWC9WaG8KblhUS29OeDlGaFkyWGx5NG9iVFA2NEtvSE9PMVc0dnppMjlZa3dJREFRQUJBb0lCQUQySDVTSEVwcWFTTkg5dgp4UnJEY0JYSndoVGRiSThPcEl5RGZrT2c3TE50dGFITnBKZDY3NjZIR1VKUTRNMFpnbDRIelZSZEV1RG8yUHJTCkZFWitzMmdUejdBZmVSOW41NzFRTDFqVWMrZjNZUUZyMlVvdzlOMU1teDBPMkRTRDdVYjVZaVByVGgrVVZSK1gKV3NCSFlkWGQ0d29uZlkzWjYyb1Z1ckVseDZzSlgvV093NFlVeVlGMDloTzYvSEhaZFRHYkhhRThPY1lFczZMeQord0NIaWY0aStPVzZ2WXhaQnFBWnNyR0UwTHh0bjJ5UTVGVmlnK2tCTjlKWkwwWTFmbjhTQTRacEpVb1kwR3F3CnAzTWYzdjRLWFNnV3VSTk8rSnMrUmhWN3k3QVB2d3lCOHgzL3Fia0pBeWRQdUM5Q0w0TjUydktYTmt0SWFZTnQKNkdUcHV1RUNnWUVBMUY4OUFlOTFmbC9yclN2VFRrWjA5eDNEa2pMUkxkWU50Tjd2c0tnSDQ1S29yOUljSDVwaAp3VjZMWCtZeUhTZDY1SlpTeWtIYldPYldraTEzeFVEeWV3NStYVjZISWY2VUJwMGNQekI2d3VlZVFZaXRGVWpmCmFLc1hIcWtGVjV4Z0YwSmdNcjk4VXhVNFdDUEU2cWZSNG9EQ0U1NTY1UDBxR21KcFovclMxQkVDZ1lFQXdEdEoKUmFDNjBEcm95VVl6akxyY0pNY20zV3ZoUDVjcjFreVBSaTZ0WTdYSm1BTkpVemNPSXp2NUNqOWQxRmxPMk9FdQpSQzZ4cEJNVE93eFNISjM2RFFpY0I5c25vMWxmY0QwdUVnYmtRM3lpUUZRandqVzJ2dk5QbHFSbjRYcU53QW9UCnFPZHkyeTA0S1lUcjJiZ3k2ZW43Z2pJdU1YZlYwb2k1OHJVdjltTUNnWUFEKzRrOFdRNCtBWFI4K2Q1cmtGeXYKS2FxNk9pTzhGVkNLZk1mSDYwN0NrTVNERDVDaGN4YTBOcDZzZkxlaDNsU3FwcnNFdWZsd0VGd2p2NkNJWFhCdQpxRlhzVUZKK2E3VEE3djlSbkFvaFQ1Q2pML24yOVRmalVab01aQ1VLZ0k4NHdIRG5Zcm5sSVBlK2gyVXc5VmExClJhN2VDVkhLcTRpM2wvTGNGVk1RMFFLQmdBaGl6YmgrNFlkeCtuUEZYenhWYm9NZ09QN1IxUHE4TW9wZnZxUlcKSnZSQm12REp1K29vYmJKMXpGQjVJVFBCVGFKQ2VJMDY2RDc3SWd5aVpmYWZvYWZ0NXppa2c5OHBaL055aDg3NwpnL3U1dFM1UFBWd2NrY05Vdy9VVGFRQzZJdkxzdlp6UnMvNEJ4QUJ6cndKSmVkY2dnUHRXQ3hQWFlYbVV3MS9tCkxaaDNBb0dBSlpzaUlTNzhnNEJmQkt4R1BYaWFQUVhWMis0dzV3WTdONEcxMk0zcDB1VEtkRGZjdU1kRnZtVFkKWkZDZTEvTjhINHloZ09LUzlPaEFIZUZRTjdtbko3ajVaNDdNanhIMU52ZzdhdDRqQnVBQ1pXSlJXRlRoNHZocwpLVjVXYzI2aE01aHNYY295d05YbXYzOTdENzdPTkd1ZmNCTnA1Slk1RDlVdFhPYU9JVXM9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=="
+
+php:
+  - 5.4
+
+cache:
+  directories:
+    - $HOME/.composer
+    - vendor
+
+addons:
+  hosts:
+    - onp.dev
+
+services:
+  - rabbitmq # will start rabbitmq-server
+
+before_script:
+  # Update PHP Configuration
+  - echo mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini.orig
+  - echo "extension = apc.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo 'date.timezone = "America/Los_Angeles"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+  # Create default configuration files
+  - cp web/davinci/xml/config/config.xml.example web/davinci/xml/config/config.xml
+
+  # Install with composer
+  - composer self-update
+  # Temporary issue with remote changes
+  - rm -rf vendor/doctrine/doctrine-bundle vendor/presta/sitemap-bundle vendor/satooshi
+  - COMPOSER_PROCESS_TIMEOUT=600 composer install -n
+
+  # Execute database creation and migrations
+  - app/console doctrine:database:create -e=test --connection=default
+  - app/console doctrine:migrations:migrate -n -e=test --em=default
+  - app/console doctrine:database:create -e=test --connection=mailinglists
+  - app/console doctrine:migrations:migrate -n -e=test --em=mailinglists
+
+  # Load testing fixtures
+  - app/console doctrine:fixtures:load -e=test
+
+script:
+  # Enable xdebug
+  - echo mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini.orig ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini || true
+  - vendor/bin/phpunit --coverage-clover clover.xml
+  # Disable xdebug
+  - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini || true
+  - php -d memory_limit=2048M vendor/bin/behat --verbose --format progress,failed
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --access-token="5472b7472266a977e2b0be942fd805d4ccf1d29f92edafd4823574271a570b81" --format=php-clover clover.xml

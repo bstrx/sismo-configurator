@@ -1,6 +1,6 @@
 {
     "name": "bstrx/sismo-configurator",
-    "description": "Nice sismo's config creator",
+    "description": "Nice Sismo's config creator",
     "require": {
         "php": ">=5.4.0",
         "symfony/yaml": "2.5.*@dev"
