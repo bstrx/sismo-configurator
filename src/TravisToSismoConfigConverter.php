@@ -1,7 +1,4 @@
 <?php
-namespace src;
-
-use SismoConfig;
 /**
  * @author Vladimir Prudilin <vladimir.prudilin@opensoftdev.ru>
  */
@@ -34,7 +31,7 @@ class TravisToSismoConfigConverter
     public function convert()
     {
         $this->parseTravisConfig();
-        $this->fillCommands($sismoConfig);
+        $this->fillCommands();
     }
 
     private function parseTravisConfig()
@@ -43,11 +40,12 @@ class TravisToSismoConfigConverter
         $this->parsedData = $this->yamlParser->parse($inputFileContent);
     }
 
-    private function convertCommands()
+    private function fillCommands()
     {
         foreach($this->commandCategories as $category) {
             if (!empty($this->parsedData[$category])) {
                 foreach ($this->parsedData[$category] as $command) {
+
                     $this->sismoConfig->addCommand($command);
                 }
             }

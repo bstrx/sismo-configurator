@@ -1,6 +1,4 @@
 <?php
-namespace src;
-
 class SismoConfig
 {
     /**
@@ -164,24 +162,33 @@ class SismoConfig
         return $this->urlPattern;
     }
 
+    /**
+     * @param $path
+     */
     public function saveConfigOnDisk($path)
     {
         $content = $this->getContent();
         file_put_contents($path, $content);
     }
 
+    /**
+     * @return string
+     */
     private function getContent()
     {
+        $glue = ';' . PHP_EOL . '    ';
+        $commands = implode($glue, $this->commands);
+
         $name = $this->name;
         $repository = $this->repository;
         $branch = $this->branch;
-        $commands = implode($this->commands);
         $slug = $this->slug;
         $urlPattern = $this->urlPattern;
         $notifier = $this->notifier;
 
-        $template = require('template.php');
+        ob_start();
+        require('template.php');
 
-        return $template;
+        return ob_get_clean();
     }
 }

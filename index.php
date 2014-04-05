@@ -1,29 +1,54 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type='text' name='name'></td>
+                </tr>
+                <tr>
+                    <td>Repository</td>
+                    <td><input type='text' name='repository'></td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td><input type='text' name='branch'></td>
+                </tr>
+                <tr>
+                    <td>Slug</td>
+                    <td><input type='text' name='slug'></td>
+                </tr>
+                <tr>
+                    <td>Url pattern</td>
+                    <td><input type='text' name='urlPattern'></td>
+                </tr>
+                <tr>
+                    <td>Notifier</td>
+                    <td><input type='text' name='notifier'></td>
+                </tr>
+                <tr>
+                    <td><input type='submit'></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+
 <?php
+use \Symfony\Component\Yaml\Yaml;
+
+require 'src/SismoConfig.php';
+require 'src/TravisToSismoConfigConverter.php';
 require 'vendor/autoload.php';
 
-$parser = new \Symfony\Component\Yaml\Yaml();
+$name = $_POST['name'];
+$repository = $_POST['repository'];
 $inputFilePath = './.travis.yml';
 $outputFilePath = 'result/config.php';
 
-echo "Trying to create " . $outputFilePath . " from " . $inputFilePath . '... ';
-
-$inputFileContent = file_get_contents($inputFilePath);
-$config = $parser->parse($inputFileContent);
-$outputFileContent = implode(PHP_EOL, getCommands($config));
-
-if (file_put_contents($outputFilePath, $outputFileContent)) {
-    echo 'Done';
-}
-
-function getCommands($config) {
-    $allCommands = array();
-    $commandsCategories = array('before_script', 'script', 'after_script');
-    foreach($commandsCategories as $category) {
-        if (!empty($config[$category])) {
-            $allCommands = array_merge($allCommands, $config[$category]);
-        }
-    }
-
-    return $allCommands;
-}
-
+$sismoConfig = new SismoConfig($name, $repository);
+$converter = new TravisToSismoConfigConverter($inputFilePath, $sismoConfig, new Yaml());
+$converter->convert();
+$sismoConfig->saveConfigOnDisk($outputFilePath);
